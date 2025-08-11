@@ -3,65 +3,294 @@
 import { Layout } from "@globals"
 ---
 
-<Layout title="Astro PWA Starter">
-	<section class="p-6 flex-1 flex flex-col justify-between">
-		<!-- Welcome -->
-		<div
-			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
-		>
-			<div class="space-y-2 text-center">
-				<h1 class="text-4xl font-semibold">🟢 astro-pwa-starter</h1>
-				<p class="italic">
-					It works! Check out <span class="p-1 rounded-lg bg-gray-100 font-mono"
-						>/src/pages</span
-					> to get started.
-				</p>
-			</div>
-			<div>
-				<ul class="grid md:grid-cols-2 gap-4">
-					<li>
-						<a
-							href="https://github.com/shaunchander/astro-pwa-starter#-getting-started-guide"
-							class="p-6 rounded-2xl border border-gray-500 flex flex-col text-center hover:bg-blue-500 focus:bg-blue-500 hover:text-white duration-300 ease-in-out transition hover:border-blue-500 focus:border-blue-500"
-						>
-							<span class="text-xl font-medium">🚀 Getting started guide</span>
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://github.com/shaunchander/astro-pwa-starter#-documentation"
-							class="p-6 rounded-2xl border border-gray-500 flex flex-col text-center hover:bg-blue-500 focus:bg-blue-500 hover:text-white duration-300 ease-in-out transition hover:border-blue-500 focus:border-blue-500"
-						>
-							<span class="text-xl font-medium">📖 Documentation</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+<Layout title="Radio Latidos 89.3">
 
-		<!-- Twitter -->
-		<div class="flex justify-center">
-			<a
-				href="https://twitter.com/shaunchander"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="relative inline-flex items-center rounded-full bg-gray-100 p-4 transition duration-300 ease-in-out hover:-translate-y-2 focus:-translate-y-2 group hover:text-white focus:text-white"
-			>
-				<div class="flex items-center space-x-4 relative z-10">
-					<img
-						src="https://pbs.twimg.com/profile_images/1626068871034667008/tc7dNg2B_400x400.jpg"
-						width={48}
-						height={48}
-						class="rounded-full object-cover"
-						alt=""
-					/>
-					<span class="text-lg font-bold">Built by @shaunchander</span>
-				</div>
-				<div
-					class="inline-block rounded-full absolute inset-0 bg-gradient-to-tr from-[#07f49e] to-[#42047e] opacity-0 group-hover:opacity-100 group-focus:opacity-100 duration-300 ease-in-out transition"
-				>
-				</div>
-			</a>
-		</div>
-	</section>
+    <section class="slider-background">
+
+        <!-- Popup flotante -->
+        <div id="install-popup">
+            <div id="install-popup-content">
+                <h2>Instala nuestra app</h2>
+                <p class="text-xs font-normal py-5">Disfruta de una experiencia más rápida, sin conexión y en pantalla completa.</p>
+                <button id="install-button">Instalar App</button>
+                <br />
+                <button id="close-popup">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Imagenes Slider-->
+        <!-- Slides con imágenes borrosas -->
+        <div class="slide" style="background-image: url('img/la-chica-de-piel-oscura-con-estilo-y-complacida-disfruta-de-la-musica-de-la-lista-de-reproduccion-de-motivacion-disfruta-del-tiempo-libre-para-escuchar-pistas-populares.avif');"></div>
+        <div class="slide" style="background-image: url('img/vista-frontal-de-mujer-con-auriculares.avif');"></div>
+        <div class="slide" style="background-image: url('img/vista-frontal-de-la-mujer-con-espacio-de-copia.avif');"></div>
+
+        <!-- Capa oscura opcional para contraste -->
+        <div class="overlay"></div>
+
+
+        <!-- Contenido -->
+        <section class="flex flex-col h-screen justify-evenly items-center slider-content">
+
+            <div class="flex items-center justify-between w-full container mx-auto">
+                <div>
+                    <ul>
+                        <li>
+                  
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <div class="pulse-red-element"></div>
+                        <p class="bg-[#ff0000] rounded-full text-white text-xs pl-2 pr-2 pb-1 pt-1">RADIO EN DIRECTO</p>
+                    </div>
+
+                </div>
+            </div>
+            <iframe style="width: 100%; height: 550px;" src="https://player.streamseguro.com/radio/latidos_prueba/" frameborder="no" scrolling="no"></iframe>
+
+            <div class="flex flex-wrap gap-2">
+                <a class="" href="#" target="_blank">
+                    <img class="bg-[#ffffff41] hover:bg-[#ffffff5a] transition ease-in-out p-2 rounded-[50%]" width="35" height="35" src="/img/GgFacebook.svg" alt="Facebook">
+                </a>
+                <a class="" href="#" target="_blank">
+                    <img class="bg-[#ffffff41] hover:bg-[#ffffff5a] transition ease-in-out  p-2 rounded-[50%]" width="35" height="35" src="/img/HumbleiconsBrandInstagram.svg" alt="Instagram">
+                </a>
+                <a class="" href="#" target="_blank">
+                    <img class="bg-[#ffffff41] hover:bg-[#ffffff5a] transition ease-in-out  p-2 rounded-[50%]" width="35" height="35" src="/img/MeteorIconsX.svg" alt="X">
+                </a>
+                <a class="" href="#" target="_blank">
+                    <img class="bg-[#ffffff41] hover:bg-[#ffffff5a] transition ease-in-out  p-2 rounded-[50%]" width="35" height="35" src="/img/IconParkOutlineYoutube.svg" alt="YouTube">
+                </a>
+                <a class="" href="#" target="_blank">
+                    <img class="bg-[#ffffff41] hover:bg-[#ffffff5a] transition ease-in-out  p-2 rounded-[50%]" width="35" height="35" src="/img/LineMdTiktok.svg" alt="TikTok">
+                </a>
+                <a class="" href="#" target="_blank">
+                    <img class="bg-[#ffffff41] hover:bg-[#ffffff5a] transition ease-in-out  p-2 rounded-[50%]" width="35" height="35" src="/img/UilWhatsapp.svg" alt="Whatsapp">
+                </a>
+            </div>
+
+            <div class="flex items-center justify-center flex-wrap gap-1">
+                <a href="#" target="_blank">
+                    <button class="group relative h-12 rounded-full border border-neutral-200 bg-transparent px-4 text-neutral-950"><span class="relative inline-flex overflow-hidden"><div class="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] group-hover:skew-y-12">App Store</div><div class="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">App Store</div></span></button>
+                </a>
+                <a href="#" target="_blank">
+                    <button class="group relative h-12 rounded-full border border-neutral-200 bg-transparent px-4 text-neutral-950"><span class="relative inline-flex overflow-hidden"><div class="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] group-hover:skew-y-12">Google Play</div><div class="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">Google Play</div></span></button>
+                </a>
+            </div>
+
+            <div>
+                <p class="font-light text-sm text-center">© 2025 <a href="https://servistream.net">servistream.net.</a> Todos los derechos reservados.</p>
+            </div>
+        </section>
+
+    </section>
+
 </Layout>
+
+<style>
+    /* Codigo del boton rojo de en vivo */
+    	    .pulse-red-element {
+            width: 15px;
+            height: 15px;
+            background-color: #ff0000; /* Set the base color to red */
+            border-radius: 50%; /* Make it a circle */
+            animation: pulse-red 2s infinite; /* Apply the animation */
+        }
+    
+        @keyframes pulse-red {
+            0% {
+                transform: scale(1); /* Initial size */
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); /* Initial shadow (faint red) */
+            }
+            70% {
+                transform: scale(1.1); /* Slightly larger */
+                box-shadow: 0 0 0 15px rgba(255, 0, 0, 0); /* Expanding, fading shadow */
+            }
+            100% {
+                transform: scale(1); /* Return to original size */
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); /* Shadow fully faded */
+            }
+        }
+    
+    /* Codigo de PopoUp */
+    
+          /* Fondo del popup */
+          #install-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeIn 0.4s ease-out forwards;
+          }
+    
+          /* Contenido del popup */
+          #install-popup-content {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 90%;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: scale(0.8);
+            opacity: 0;
+            animation: popupIn 0.4s ease-out forwards;
+          }
+    
+          /* Animaciones */
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+    
+          @keyframes popupIn {
+            to {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+    
+          /* Botón instalar */
+          #install-button {
+            background-color: #12171f;
+            color: white;
+            border: none;
+            padding: 4px 15px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+          }
+    
+          #install-button:hover {
+            background-color: #246ad1;
+          }
+    
+          /* Botón cerrar */
+          #close-popup {
+            margin-top: 1rem;
+            background-color: transparent;
+            border: none;
+            color: #444;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 0.9rem;
+          }
+    
+    /* Codigo Slider */
+    
+        .slider-background {
+          position: relative;
+          width: 100%;
+          height: 100vh;
+          overflow: hidden;
+        }
+    
+        .slide {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          opacity: 0;
+          transform: scale(1); /* Ahora inicia sin zoom */
+          transition: opacity 1.5s ease-out, transform 8s ease-out;
+          z-index: 0;
+          filter: blur(6px); /* Efecto glass */
+        }
+    
+        .slide.active {
+          opacity: 1;
+          transform: scale(1.2); /* Zoom in */
+          z-index: 1;
+        }
+    
+        .overlay {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.127); /* Oscurece para contraste */
+          z-index: 2;
+        }
+    
+        .slider-content {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          z-index: 3;
+        }
+    
+</style>
+
+
+<script>
+
+  //Codigo POPUP
+      let deferredPrompt;
+
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+
+        const popup = document.getElementById('install-popup');
+        popup.style.display = 'flex';
+
+        const installBtn = document.getElementById('install-button');
+        const closeBtn = document.getElementById('close-popup');
+
+        installBtn.addEventListener('click', async () => {
+          popup.style.display = 'none';
+          deferredPrompt.prompt();
+          const result = await deferredPrompt.userChoice;
+          console.log('Resultado de instalación:', result.outcome);
+          deferredPrompt = null;
+        });
+
+        closeBtn.addEventListener('click', () => {
+          popup.style.display = 'none';
+        });
+      });
+
+  //Codigo SLIDER
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+    const total = slides.length;
+    const duration = 8000; // 8 segundos por slide
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      current = (current + 1) % total;
+      showSlide(current);
+    }
+
+    // Iniciar
+    showSlide(current);
+    setInterval(nextSlide, duration);
+
+
+</script>
